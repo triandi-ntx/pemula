@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Advent+Pro:wght@400;500&family=PT+Sans&family=Roboto+Condensed&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <nav><i class="fas fa-book"></i> Bookshelf Apps</nav>
+
+    <main class="main-wrapper">
+      <div class="sub-wrapper input-wrapper">
+        <div class="input-book-data">
+          <h1>Book Data</h1>
+          <form id="book-data-input">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" class="input-form" id="title" placeholder="Enter title of the book here" autocomplete="off" required />
+            </div>
+            <div class="form-group">
+              <label for="author">Author</label>
+              <input type="text" class="input-form" id="author" placeholder="Enter author of the book here" autocomplete="off" required />
+            </div>
+            <div class="form-group">
+              <label for="year">Publish Year</label>
+              <input type="number" class="input-form" id="year" placeholder="Enter publish year of the book here" autocomplete="off" required />
+            </div>
+            <div class="check-form-group">
+              <input type="checkbox" id="is-finished" />
+              <p>I have finished reading this book</p>
+            </div>
+            <input type="hidden" id="bookId" />
+            <div class="button-group">
+              <input type="submit" class="input-form" id="submit" value="Submit" />
+              <input type="button" class="input-form" id="edit" value="Edit" />
+              <input type="reset" class="input-form" id="reset" value="Reset" />
+            </div>
+          </form>
+        </div>
+        <div class="search-book-data">
+          <h1>Search Data</h1>
+          <form id="search-form">
+            <div class="form-group">
+              <input type="text" class="input-form" id="search" placeholder="Enter title of the book here" autocomplete="off" />
+            </div>
+            <div class="button-group button-group-search">
+              <input type="submit" class="input-form" id="submitSearch" value="Search" />
+            </div>
+            <div class="button-group button-group-search">
+              <input type="reset" class="input-form" id="resetSearch" value="See all Data" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="sub-wrapper">
+        <div class="bookshelfs">
+          <div class="bookshelf completed-books">
+            <h1 class="title-sub-wrapper">Completed Books</h1>
+            <div class="books" id="completed-books"></div>
+          </div>
+          <div class="bookshelf uncomplete-books">
+            <h1 class="title-sub-wrapper">Uncomplete Books</h1>
+            <div class="books" id="uncomplete-books"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>Copyright &copy; 2022 - Bookshelf Apps</footer>
+
+    <script src="https://kit.fontawesome.com/c322b99201.js" crossorigin="anonymous"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/dom.js"></script>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 100%;
+  padding: 20px;
+  background-color: rgb(3, 1, 19);
+  color: white;
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 23px;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  font-family: 'Abel', sans-serif;
+}
+
+main .sub-wrapper {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+main .input-wrapper h1,
+main .bookshelfs h1.title-sub-wrapper {
+  margin: 0;
+  padding: 8px;
+  font-size: 25px;
+  border-bottom: 1px solid rgb(172, 171, 171);
+}
+
+main .input-wrapper .search-book-data {
+  margin-top: 16px;
+}
+
+main .input-wrapper form {
+  padding: 0 10px;
+}
+
+main .input-wrapper form .form-group {
+  margin: 15px 0;
+}
+
+main .input-wrapper form .form-group label,
+main .input-wrapper form .form-group input {
+  display: block;
+}
+
+main .input-wrapper form .form-group label {
+  margin-bottom: 5px;
+}
+
+main .input-wrapper form .form-group input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+main .input-wrapper form .form-group input[type='text']:focus,
+main .input-wrapper form .form-group input[type='number']:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: 0 0 0 0.2rem rgb(133, 218, 133);
+  transition: box-shadow 0.3s ease-out;
+}
+
+main .input-wrapper form .check-form-group p,
+main .input-wrapper form .check-form-group input {
+  display: inline-block;
+  margin-top: -10px;
+}
+
+main .input-wrapper form .button-group {
+  padding: 10px 0;
+  text-align: right;
+}
+
+main .input-wrapper form .button-group input[type='submit'],
+main .input-wrapper form .button-group input[type='button'] {
+  width: 160px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  cursor: pointer;
+  background-color: rgb(20, 90, 25);
+  color: white;
+  transition: background-color 0.3s ease-out;
+}
+
+main .input-wrapper form .button-group input[type='reset'] {
+  width: 160px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid rgb(6, 81, 83);
+  cursor: pointer;
+  background-color: rgb(21, 119, 143);
+  color: white;
+  transition: background-color 0.3s ease-out;
+}
+
+main .input-wrapper form .button-group input[type='reset']#reset {
+  margin-top: 5px;
+}
+
+main .input-wrapper form .button-group input[type='reset']#resetSearch {
+  margin-top: -35px;
+}
+
+main .input-wrapper form#search-data {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 7px;
+}
+
+main .input-wrapper form .button-group-search input {
+  width: 100% !important;
+  margin-top: 7px;
+}
+
+main .input-wrapper form .button-group input[type='submit']:hover,
+main .input-wrapper form .button-group input[type='button']:hover {
+  background-color: rgb(35, 155, 43);
+  transition: all 0.3s ease-out;
+}
+
+main .input-wrapper form .button-group input[type='reset']:hover {
+  background-color: rgb(83, 132, 145);
+  transition: all 0.3s ease-out;
+}
+
+main .bookshelfs .bookshelf {
+  min-height: 250px;
+  padding: 10px 15px;
+}
+
+main .bookshelfs .bookshelf .books {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 25px;
+  row-gap: 15px;
+}
+
+main .bookshelfs .bookshelf .books .book {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: relative;
+}
+
+main .bookshelfs .bookshelf .books .book img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 25px;
+}
+
+main .bookshelfs .bookshelf .books .book .year {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 75px;
+  text-align: center;
+  font-size: 14px;
+  background-color: white;
+  padding: 7px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+main .bookshelfs .bookshelf .books .book h1,
+main .bookshelfs .bookshelf .books .book p {
+  margin: 0;
+}
+
+main .bookshelfs .bookshelf .books .book h1 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+main .bookshelfs .bookshelf .books .book p {
+  font-size: 14px;
+}
+
+main .bookshelfs .bookshelf .books .book .buttons {
+  margin-top: 10px;
+}
+
+main .bookshelfs .bookshelf .books .book .buttons .btn {
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  margin: 0 2px;
+}
+
+main .bookshelfs .bookshelf .books .book .buttons .btn-mark-as-read {
+  background-color: rgb(45, 79, 143);
+}
+
+main .bookshelfs .bookshelf .books .book .buttons .btn-mark-as-read:hover {
+  background-color: rgb(16, 33, 65);
+}
+
+main .bookshelfs .bookshelf .books .book .buttons .btn-edit {
+  background-color: rgb(32, 116, 36);
+}
+
+main .bookshelfs .bookshelf .books .book .buttons .btn-edit:hover {
+  background-color: rgb(20, 71, 22);
+}
+
+main .bookshelfs .bookshelf .books .book .buttons .btn-delete {
+  background-color: rgb(212, 44, 44);
+}
+
+main .bookshelfs .bookshelf .books .book .buttons .btn-delete:hover {
+  background-color: rgb(100, 16, 16);
+}
+
+footer {
+  width: 100%;
+  padding: 15px;
+  background-color: rgb(1, 0, 7);
+  color: white;
+  font-family: 'Advent Pro', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 600px) {
+  main .bookshelfs .bookshelf .books {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 920px) {
+  main {
+    padding: 15px 30px;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  main .bookshelfs .bookshelf .books {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
